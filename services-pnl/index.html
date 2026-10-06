@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services P&amp;L Support</title>
+<meta name="description" content="Setup, troubleshooting and support for the Services P&amp;L custom visual for Power BI.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../"><img src="../img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>Services P&amp;L</h1>
+  <p class="lead">A services P&amp;L by line of business: actual vs budget, forecast or prior year for MTD, QTD, YTD and full year, as scorecards, a grid, a matrix or a monthly trend.</p>
+</header>
+<main>
+  <p><a class="btn" href="../downloads/ServicesPnL.pbiviz" download>Download .pbiviz</a> <a href="../downloads.html">All downloads and install steps</a></p>
+  <div class="callout">Need help? <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new?title=%5BServices%20P%26L%5D%20">Open an issue</a>. Include the version from Format pane › <em>About</em>.</div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Power BI Desktop (current release), the Power BI service or Power BI Report Server with custom visuals enabled.</li>
+    <li>A date or month column, and at least one actual measure.</li>
+  </ul>
+
+  <h2>Setting up</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Field well</th><th>What to add</th></tr></thead>
+    <tbody>
+      <tr><td>Category</td><td>Optional. Line of business, stream or practice, one or two levels. Use the field your budget is planned on.</td></tr>
+      <tr><td>Slicer</td><td>Optional. A field shown as buttons above the view (for example Stream). It filters this visual only.</td></tr>
+      <tr><td>Month</td><td>Required. A date at month level or finer, ideally from a marked date table.</td></tr>
+      <tr><td>Actual lines</td><td>Required. One measure per P&amp;L line, revenue first (Revenue, COGS, Payroll…). A measure named GM, Gross Margin or Margin is used as the margin line.</td></tr>
+      <tr><td>Budget lines</td><td>Optional. Budget measures, matched to the actual lines by name (Revenue ↔ Revenue Bud), in any order.</td></tr>
+      <tr><td>Forecast lines</td><td>Optional. Forecast measures, matched by name. They also fill the remaining months of the full year.</td></tr>
+      <tr><td>Info lines</td><td>Optional. Measures shown with actuals only and left out of the margin (milestones, pipeline, headcount).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Costs can be stored as negative (default) or positive values: set this in Format pane › <em>P&amp;L lines</em>.</p>
+
+  <h2>Troubleshooting</h2>
+  <h3>The vs PY button is missing or prior year is empty</h3>
+  <p>Prior year is the actual for the same months one year earlier, so the visual needs last year’s months. A page or report date slicer that keeps only the current year removes them. Set that slicer’s interaction with this visual to <em>None</em> (Format › Edit interactions) and use the visual’s own as-of month picker.</p>
+  <h3>The vs FC button is missing</h3>
+  <p>It appears once at least one Forecast measure is bound and returns data.</p>
+  <h3>Margin looks doubled</h3>
+  <p>Name your margin measure GM, Gross Margin or Margin so the visual uses it as the margin line instead of adding it as a cost, or leave it out and let the visual calculate margin from the lines.</p>
+  <h3>Budget is paired with the wrong line</h3>
+  <p>Budget and forecast measures are matched to actual lines by name. Give them names that share the line name (Revenue / Revenue Bud / Revenue FC; COGS / COGS Bud).</p>
+  <h3>A category shows “BU only” or “no AC”</h3>
+  <p>That category has budget but no actuals in the selected period. This usually means budget and actuals are planned on different fields; put the field the budget uses in Category.</p>
+  <h3>Removing a cross-filter</h3>
+  <p>Click the selected item again, click empty space, press Esc or use <em>✕ Clear selection</em> in the header.</p>
+  <h3>Drill through does not appear</h3>
+  <p>Right-click a category. Power BI shows <em>Drill through</em> when a drillthrough page uses the same field as the visual’s Category.</p>
+  <h3>Keyboard use</h3>
+  <p>Tab moves to categories, Enter or Space selects (Ctrl adds), Shift+F10 opens the context menu and Esc clears the selection.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Other visuals filter this one rather than highlighting it, so every figure, variance and margin % is recalculated for the selection.</li>
+    <li>The interface is in English.</li>
+    <li>Up to 30,000 category × month rows are loaded.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>The visual has no network access and does not collect, send or store your data. See the <a href="../privacy.html">privacy policy</a>.</p>
+</main>
+<footer>
+  <a href="../">Support</a><a href="../downloads.html">Downloads</a><a href="../license.html">License</a><a href="../privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>

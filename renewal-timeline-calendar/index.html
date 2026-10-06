@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renewal Timeline Calendar Support</title>
+<meta name="description" content="Setup, troubleshooting and support for the Renewal Timeline Calendar custom visual for Power BI.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../"><img src="../img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>Renewal Timeline Calendar</h1>
+  <p class="lead">A swimlane timeline for opportunities, contracts and renewals with notice windows, renewal alerts, milestones, dependencies and zoom levels.</p>
+</header>
+<main>
+  <p><a class="btn" href="../downloads/RenewalTimelineCalendar.pbiviz" download>Download .pbiviz</a> <a href="../downloads.html">All downloads and install steps</a></p>
+  <div class="callout">Need help? <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new?title=%5BRenewal%20Timeline%20Calendar%5D%20">Open an issue</a>. Include the version of the visual, your Power BI Desktop version and a screenshot.</div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Power BI Desktop (current release), the Power BI service or Power BI Report Server with custom visuals enabled.</li>
+    <li>A title field and at least one of start date or end / renewal date.</li>
+  </ul>
+
+  <h2>Setting up</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Field well</th><th>What to add</th></tr></thead>
+    <tbody>
+      <tr><td>Title</td><td>Required. Row label and bar text.</td></tr>
+      <tr><td>Item ID</td><td>Optional. Unique ID, referenced by Depends on.</td></tr>
+      <tr><td>Swimlane / Group</td><td>Optional. One collapsible lane per value.</td></tr>
+      <tr><td>Start date</td><td>Optional. Bar start; leave empty for a single-date milestone. Use the date field itself, not the date hierarchy.</td></tr>
+      <tr><td>End / Renewal date</td><td>Required if there is no start date. Bar end and renewal diamond.</td></tr>
+      <tr><td>Notice / cancel-by date</td><td>Optional. Hatched notice window before the renewal.</td></tr>
+      <tr><td>Status / Category</td><td>Optional. Colors bars; closed statuses are muted and never alert.</td></tr>
+      <tr><td>Depends on</td><td>Optional. Predecessor IDs, separated by , or ;</td></tr>
+      <tr><td>Value</td><td>Optional. Amount shown next to bars, in lane headers and summary cards.</td></tr>
+      <tr><td>Progress %</td><td>Optional. 0–1 or 0–100, fills the bar.</td></tr>
+      <tr><td>Notice period (days)</td><td>Optional. Alternative to a notice date.</td></tr>
+      <tr><td>Extra tooltip fields</td><td>Optional. For text fields choose First or Last as aggregation.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <h3>Items disappear when I add a measure</h3>
+  <p>Power BI drops rows where every measure is blank. Give such items a value (for example 0) or turn on <em>Show items with no data</em> for the Title field.</p>
+  <h3>Dates show as Year / Quarter / Month</h3>
+  <p>Use the date column itself instead of the automatic date hierarchy.</p>
+  <h3>Alerts are based on the wrong date</h3>
+  <p>Alerts use the notice date by default; switch to the renewal date and change the 30 / 60 / 90-day thresholds in the Format pane.</p>
+  <h3>A dependency arrow is red and dashed</h3>
+  <p>The successor starts before its predecessor ends. Hover the item to see the conflict.</p>
+  <h3>Removing a cross-filter</h3>
+  <p>Click the selected item again, click empty space or press Esc.</p>
+  <h3>Keyboard use</h3>
+  <p>Tab into the rows, then arrow keys move, Left / Right collapse or expand a swimlane, Home / End jump, Enter selects, Shift+F10 opens the context menu and Esc clears.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Up to 30,000 rows are loaded.</li>
+    <li>The interface is in English.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>The visual has no network access and does not collect, send or store your data. See the <a href="../privacy.html">privacy policy</a>.</p>
+</main>
+<footer>
+  <a href="../">Support</a><a href="../downloads.html">Downloads</a><a href="../license.html">License</a><a href="../privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>

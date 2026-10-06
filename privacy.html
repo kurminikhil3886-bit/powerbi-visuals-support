@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy</title>
+<meta name="description" content="Privacy policy for Power BI custom visuals by BI Vision: the visuals do not collect, transmit or store your data.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./"><img src="img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>Privacy policy</h1>
+  <p class="lead">Effective 6 October 2026</p>
+</header>
+<main>
+  <div class="callout good"><strong>In short:</strong> the visuals do not collect, send or keep any of your data. They work entirely inside Power BI on the data that Power BI gives them, and they have no network access (Org Hierarchy Chart can show photos from addresses in your own data; see below).</div>
+
+  <p>This policy covers the Power BI custom visuals published by BI Vision (“we”), including Services P&amp;L, IBCS Variance Chart, IBCS Variance Table, Org Hierarchy Chart, Renewal Timeline Calendar and Team Activity Timeline (“the visuals”), and this support website.</p>
+
+  <h2>Data the visuals process</h2>
+  <p>When you add a visual to a report, Power BI passes it the fields and values you place in its field wells. The visual uses this data only to draw the chart on your screen, in memory, inside the sandbox that Power BI provides for custom visuals.</p>
+  <ul>
+    <li><strong>No transmission.</strong> The visuals request no Power BI privileges (no web access, no file downloads, no local storage) and send no data anywhere, so your data cannot leave Power BI through them. The one exception you control is described under <a href="#photos">Photos in Org Hierarchy Chart</a>.</li>
+    <li><strong>No collection or storage by us.</strong> We never receive, see or keep your report data, your identity or your organization’s details.</li>
+    <li><strong>No tracking.</strong> The visuals use no cookies, browser storage, analytics, telemetry, advertising or third-party services.</li>
+  </ul>
+
+  <h2 id="photos">Photos in Org Hierarchy Chart</h2>
+  <p>If you put a field in the <em>Photo URL</em> well of Org Hierarchy Chart and keep <em>Show photos</em> on, the viewer’s browser loads each picture from the address in your data, as any web page does with an image. The server hosting the pictures (usually your own, such as SharePoint or your HR system) then receives a normal image request, which includes the viewer’s IP address and browser details. No report data is sent with it, and we never receive these requests. Leave the well empty or turn <em>Show photos</em> off to prevent it; depending on your Power BI version and settings, Power BI may also block such pictures.</p>
+
+  <h2>Settings saved in your report</h2>
+  <p>Format pane options and choices made in the visual (such as the selected view, period, comparison, sort order or slicer values) are saved by Power BI inside your report, like the settings of any built-in visual. They stay in your report and under your organization’s control; we have no access to them.</p>
+
+  <h2>Microsoft</h2>
+  <p>Power BI, Microsoft AppSource and Microsoft Partner Center are operated by Microsoft. How Microsoft handles data in these services, including any usage data it collects when you install or use a visual, is described in the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>. We do not receive personal data about you from Microsoft through your use of the visuals.</p>
+
+  <h2>When you contact us</h2>
+  <p>If you email us or open an issue, we receive what you choose to send (for example your name, email address, the problem description and any attachments). We use it only to answer you and fix the problem, we do not share or sell it, and we delete support emails and attachments within 12 months of the issue being closed. Issues on GitHub are public and are also covered by the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>; please do not post confidential data there.</p>
+
+  <h2>This website</h2>
+  <p>This site is static and is hosted on GitHub Pages. It sets no cookies and uses no analytics. GitHub may log technical data such as IP addresses for security purposes, as described in the GitHub Privacy Statement.</p>
+
+  <h2>Children</h2>
+  <p>The visuals and this site are business tools and are not directed at children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the visuals ever start to process data differently, this policy will be updated before the new version is released and the effective date above will change. The history of this page is kept in its public repository.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new">open an issue on GitHub</a>.</p>
+</main>
+<footer>
+  <a href="./">Support</a><a href="downloads.html">Downloads</a><a href="license.html">License</a><a href="privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>

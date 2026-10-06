@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9A3412"/><stop offset="1" stop-color="#F08A24"/></linearGradient>
+<pattern id="h" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="12" fill="#fff"/></pattern></defs>
+<rect x="6" y="6" width="288" height="288" rx="64" fill="url(#g)"/>
+<rect x="190" y="44" width="6" height="216" rx="3" fill="#fff" opacity=".75"/>
+<rect x="48" y="66" width="120" height="30" rx="8" fill="#fff"/><rect x="128" y="66" width="40" height="30" fill="url(#h)" opacity="0"/>
+<rect x="96" y="134" width="74" height="30" rx="8" fill="#fff"/><rect x="58" y="134" width="40" height="30" rx="6" fill="url(#h)" opacity=".85"/>
+<rect x="64" y="202" width="168" height="30" rx="8" fill="#fff"/>
+<g fill="#FEF08A" stroke="#7C2D12" stroke-width="5"><path d="M182 81 l17 -17 l17 17 l-17 17 z"/><path d="M184 149 l17 -17 l17 17 l-17 17 z"/><path d="M232 217 l17 -17 l17 17 l-17 17 z"/></g>
+</svg>

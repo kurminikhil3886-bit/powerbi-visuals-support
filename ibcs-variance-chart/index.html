@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IBCS Variance Chart Support</title>
+<meta name="description" content="Setup, troubleshooting and support for the IBCS Variance Chart custom visual for Power BI.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../"><img src="../img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>IBCS Variance Chart</h1>
+  <p class="lead">An IBCS-style variance chart for periods: actual columns against plan, previous year or forecast, with absolute and relative variances, a total column, callouts, a generated headline and a table view.</p>
+</header>
+<main>
+  <p><a class="btn" href="../downloads/IbcsVarianceChart.pbiviz" download>Download .pbiviz</a> <a href="../downloads.html">All downloads and install steps</a></p>
+  <div class="callout">Need help? <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new?title=%5BIBCS%20Variance%20Chart%5D%20">Open an issue</a>. Include the version of the visual, your Power BI Desktop version and a screenshot.</div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Power BI Desktop (current release), the Power BI service or Power BI Report Server with custom visuals enabled.</li>
+    <li>A category field for the periods (usually months), sorted chronologically, and an actual measure.</li>
+  </ul>
+
+  <h2>Setting up</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Field well</th><th>What to add</th></tr></thead>
+    <tbody>
+      <tr><td>Category (period / item)</td><td>Required. Items on the horizontal axis, usually months. Use the date field itself, not the date hierarchy.</td></tr>
+      <tr><td>Actual (AC)</td><td>Required. Leave it blank for future periods.</td></tr>
+      <tr><td>Plan / Budget (PL)</td><td>Optional. Outlined comparison column; basis of ΔPL and ΔPL%.</td></tr>
+      <tr><td>Previous year (PY)</td><td>Optional. Grey comparison column; basis of ΔPY and ΔPY%.</td></tr>
+      <tr><td>Forecast (FC)</td><td>Optional. Hatched column for periods without an actual.</td></tr>
+      <tr><td>Callout text</td><td>Optional. A comment per period, shown as a numbered circle and a list.</td></tr>
+      <tr><td>Extra tooltip values</td><td>Optional. Additional measures in the tooltip.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <h3>Increases in costs show green</h3>
+  <p>Turn off <em>Higher is better</em> (Format pane › Chart) for costs, terminations and similar measures.</p>
+  <h3>Months are in the wrong order</h3>
+  <p>Sort the month column by a month number, or use a date field instead of the date hierarchy.</p>
+  <h3>The total looks wrong for a ratio or balance</h3>
+  <p>Set <em>Total aggregation</em> to Average or Last value.</p>
+  <h3>Some value labels are missing</h3>
+  <p>Labels are drawn only when they fit their column. Widen the visual, reduce the text size or hover a column for every value.</p>
+  <h3>A comparison button is missing</h3>
+  <p>vs PY, vs PL and vs FC appear only for the comparisons that have a field.</p>
+  <h3>Removing a cross-filter</h3>
+  <p>Click the selected item again, click empty space or press Esc.</p>
+  <h3>Keyboard use</h3>
+  <p>Tab moves to the columns (or table rows), arrow keys move between them, Enter or Space selects (Ctrl adds), Shift+F10 opens the context menu and Esc clears the selection.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Up to 30,000 periods are loaded.</li>
+    <li>While another visual highlights, the highlighted part of each column is solid; Δ, Δ% and the headline stay on the full values.</li>
+    <li>The interface is in English.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>The visual has no network access and does not collect, send or store your data. See the <a href="../privacy.html">privacy policy</a>.</p>
+</main>
+<footer>
+  <a href="../">Support</a><a href="../downloads.html">Downloads</a><a href="../license.html">License</a><a href="../privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>

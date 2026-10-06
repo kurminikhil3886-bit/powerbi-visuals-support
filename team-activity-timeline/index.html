@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Activity Timeline Support</title>
+<meta name="description" content="Setup, troubleshooting and support for the Team Activity Timeline custom visual for Power BI.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../"><img src="../img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>Team Activity Timeline</h1>
+  <p class="lead">When each person was available, on call or away (and why), with tickets and calls, per day, week, month or year. Works with ServiceNow data.</p>
+</header>
+<main>
+  <p><a class="btn" href="../downloads/TeamActivityTimeline.pbiviz" download>Download .pbiviz</a> <a href="../downloads.html">All downloads and install steps</a></p>
+  <div class="callout">Need help? <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new?title=%5BTeam%20Activity%20Timeline%5D%20">Open an issue</a>. Include the version of the visual, your Power BI Desktop version and a screenshot.</div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Power BI Desktop (current release), the Power BI service or Power BI Report Server with custom visuals enabled.</li>
+    <li>A person field and a start date/time; status and / or event rows.</li>
+  </ul>
+
+  <h2>Setting up</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Field well</th><th>What to add</th></tr></thead>
+    <tbody>
+      <tr><td>Person</td><td>Required. One row per person.</td></tr>
+      <tr><td>Start (date/time)</td><td>Required. When the status or event began. Use the Date/Time column itself, not the date hierarchy.</td></tr>
+      <tr><td>End (date/time)</td><td>Optional. Without it a status lasts until the person’s next status.</td></tr>
+      <tr><td>Status</td><td>Required for status rows. Any values work; new ones get a color automatically.</td></tr>
+      <tr><td>Status group</td><td>Optional. Groups statuses for colors and totals.</td></tr>
+      <tr><td>Reason / detail</td><td>Optional. Why the person was away, or a short description of a ticket or call.</td></tr>
+      <tr><td>Event type</td><td>Required for event rows (Ticket, Call, Chat…).</td></tr>
+      <tr><td>Event ID</td><td>Optional. Ticket or call number, shown in the tooltip.</td></tr>
+      <tr><td>Team</td><td>Optional. Collapsible team headers with totals.</td></tr>
+      <tr><td>Extra tooltip fields</td><td>Optional. For text fields choose First or Last as aggregation.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <h3>People should not be identifiable</h3>
+  <p>Use <em>Hide names</em> or <em>Show rows for: Teams only</em>, and check your company’s policy before sharing a report that shows individuals’ time.</p>
+  <h3>Total columns disappear</h3>
+  <p>Columns that do not fit next to a usable chart are dropped from the right. Widen the visual or list fewer columns under <em>Total columns</em>.</p>
+  <h3>Only part of the data is shown</h3>
+  <p>Turn on <em>Load more than 30,000 rows</em> under Data loading (default limit 300,000 rows).</p>
+  <h3>A status is cut short</h3>
+  <p>Status rows are a sequence per person, so a status that overlaps the next one ends where the next one starts.</p>
+  <h3>Removing a cross-filter</h3>
+  <p>Click the selected item again, click empty space or press Esc.</p>
+  <h3>Keyboard use</h3>
+  <p>Tab to a name, Up / Down move between rows, Enter selects a person or expands a team, Left / Right collapse or expand a team (outside the rows they move to the previous or next period), Shift+F10 opens the context menu and Esc clears.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Highlighting from other visuals needs a measure in Extra tooltip fields; without one, other visuals filter this visual instead.</li>
+    <li>The interface is in English.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>The visual has no network access and does not collect, send or store your data. See the <a href="../privacy.html">privacy policy</a>.</p>
+</main>
+<footer>
+  <a href="../">Support</a><a href="../downloads.html">Downloads</a><a href="../license.html">License</a><a href="../privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>

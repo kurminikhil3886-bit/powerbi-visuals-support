@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Org Hierarchy Chart Support</title>
+<meta name="description" content="Setup, troubleshooting and support for the Org Hierarchy Chart custom visual for Power BI.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../"><img src="../img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>Org Hierarchy Chart</h1>
+  <p class="lead">A top-down organization chart with search, branch focus, span-of-control flags, metrics and cross-filtering.</p>
+</header>
+<main>
+  <p><a class="btn" href="../downloads/OrgHierarchyChart.pbiviz" download>Download .pbiviz</a> <a href="../downloads.html">All downloads and install steps</a></p>
+  <div class="callout">Need help? <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new?title=%5BOrg%20Hierarchy%20Chart%5D%20">Open an issue</a>. Include the version of the visual, your Power BI Desktop version and a screenshot.</div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Power BI Desktop (current release), the Power BI service or Power BI Report Server with custom visuals enabled.</li>
+    <li>An employee ID and a manager ID column (the manager&#x27;s employee ID; blank for the top).</li>
+  </ul>
+
+  <h2>Setting up</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Field well</th><th>What to add</th></tr></thead>
+    <tbody>
+      <tr><td>Employee ID</td><td>Required. Unique ID of each person.</td></tr>
+      <tr><td>Manager ID</td><td>Required. Employee ID of the manager; blank for the top. People whose manager is not in the data become top level.</td></tr>
+      <tr><td>Employee name</td><td>Optional. Card text, also searched.</td></tr>
+      <tr><td>Job title</td><td>Optional. Card subtitle, also searched.</td></tr>
+      <tr><td>Color by</td><td>Optional. Colors the card strip and avatar, with a legend.</td></tr>
+      <tr><td>Photo URL</td><td>Optional. Profile picture; initials are shown otherwise. See the note on photos below.</td></tr>
+      <tr><td>Metric (card value)</td><td>Optional. Shown as a bar on each card; also used for the heatmap and roll-up.</td></tr>
+      <tr><td>Extra tooltip fields</td><td>Optional. Additional fields in the tooltip.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <h3>Some people appear at the top level</h3>
+  <p>Their Manager ID does not match any Employee ID in the filtered data. Check for filters that remove managers, and for IDs stored with different types or spaces.</p>
+  <h3>Photos do not show</h3>
+  <p>The browser loads pictures directly from the URL, so the viewer must be able to open that address (signed in, same network). Depending on your Power BI version and settings, Power BI may block pictures from external addresses; initials are shown instead.</p>
+  <h3>The chart is slow for a large organization</h3>
+  <p>Only expanded levels are drawn. Start with L1 to L3 and use search or Team focus.</p>
+  <h3>Expanded branches reset</h3>
+  <p>The expand / collapse state is not saved with the report.</p>
+<h2>Note on photos</h2><p>When the Photo URL well is used, the viewer’s browser requests each picture from the address in your data. No report data is sent with these requests and we never receive them; see the <a href="../privacy.html#photos">privacy policy</a>. Leave the well empty or turn <em>Show photos</em> off to avoid them.</p>
+  <h3>Keyboard use</h3>
+  <p>The chart is one tab stop: arrow keys move through the tree, Right / Left expand or collapse, Home / End jump, Enter or Space selects, Shift+F10 opens the context menu and Esc clears.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Up to 30,000 people are loaded.</li>
+    <li>Expand / collapse state is not remembered between sessions.</li>
+    <li>Other visuals filter this one rather than highlighting it.</li>
+    <li>The interface is in English.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>The visual does not collect, send or store your data; the only requests it causes are the photo downloads described above. See the <a href="../privacy.html">privacy policy</a>.</p>
+</main>
+<footer>
+  <a href="../">Support</a><a href="../downloads.html">Downloads</a><a href="../license.html">License</a><a href="../privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>

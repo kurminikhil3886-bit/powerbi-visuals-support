@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IBCS Variance Table Support</title>
+<meta name="description" content="Setup, troubleshooting and support for the IBCS Variance Table custom visual for Power BI.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="../"><img src="../img/bi-vision.svg" alt="" width="28" height="28">BI Vision · Power BI custom visuals</a>
+  <h1>IBCS Variance Table</h1>
+  <p class="lead">IBCS-style variance by category: a hierarchy with subtotals, actual bars, Δ bars and Δ% pins, Top N and a sortable table view.</p>
+</header>
+<main>
+  <p><a class="btn" href="../downloads/IbcsVarianceTable.pbiviz" download>Download .pbiviz</a> <a href="../downloads.html">All downloads and install steps</a></p>
+  <div class="callout">Need help? <a href="https://github.com/kurminikhil3886-bit/powerbi-visuals-support/issues/new?title=%5BIBCS%20Variance%20Table%5D%20">Open an issue</a>. Include the version of the visual, your Power BI Desktop version and a screenshot.</div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Power BI Desktop (current release), the Power BI service or Power BI Report Server with custom visuals enabled.</li>
+    <li>One or more category fields and an actual measure.</li>
+  </ul>
+
+  <h2>Setting up</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Field well</th><th>What to add</th></tr></thead>
+    <tbody>
+      <tr><td>Category (one or more levels)</td><td>Required. Several fields become an expandable hierarchy with subtotals.</td></tr>
+      <tr><td>Actual (AC)</td><td>Required. Its format string is used for all values.</td></tr>
+      <tr><td>Previous year (PY)</td><td>Optional. Grey bar behind the actual; basis of ΔPY and ΔPY%.</td></tr>
+      <tr><td>Plan / Budget (PL)</td><td>Optional. Outlined bar; basis of ΔPL and ΔPL%.</td></tr>
+      <tr><td>Forecast (FC)</td><td>Optional. Hatched bar; basis of ΔFC and ΔFC%.</td></tr>
+      <tr><td>Extra tooltip values</td><td>Optional. Shown in the tooltip of single rows.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <h3>Increases show green for a cost measure</h3>
+  <p>Turn off <em>Higher is better</em> (Format pane › Colors).</p>
+  <h3>Subtotals of a ratio are wrong</h3>
+  <p>Subtotals are sums of the rows. For ratios such as a rate, use a single level or show the ratio in the tooltip.</p>
+  <h3>A large Δ% is cut off with »</h3>
+  <p>Relative variances are clipped at 150% by default. Change <em>Clip relative variance</em> under Columns and layout.</p>
+  <h3>Removing a cross-filter</h3>
+  <p>Click the selected item again, click empty space or press Esc.</p>
+  <h3>Keyboard use</h3>
+  <p>Tab into the rows, Up / Down to move, Left / Right to collapse or expand, Enter or Space to select, Shift+F10 for the context menu and Esc to clear.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>Up to 30,000 rows are loaded.</li>
+    <li>The interface is in English.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>The visual has no network access and does not collect, send or store your data. See the <a href="../privacy.html">privacy policy</a>.</p>
+</main>
+<footer>
+  <a href="../">Support</a><a href="../downloads.html">Downloads</a><a href="../license.html">License</a><a href="../privacy.html">Privacy policy</a>
+  <div>© 2026 BI Vision</div>
+</footer>
+</body>
+</html>
