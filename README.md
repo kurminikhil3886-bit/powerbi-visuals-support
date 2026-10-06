@@ -4,12 +4,12 @@ Free custom visuals for Power BI. **Website:** https://kurminikhil3886-bit.githu
 
 | Visual | Version | Download | Support |
 |---|---|---|---|
-| Services P&L | 1.4.3 | [ServicesPnL.pbiviz](downloads/ServicesPnL.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/services-pnl/) |
-| IBCS Variance Chart | 2.4.0 | [IbcsVarianceChart.pbiviz](downloads/IbcsVarianceChart.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/ibcs-variance-chart/) |
-| IBCS Variance Table | 1.3.0 | [IbcsVarianceTable.pbiviz](downloads/IbcsVarianceTable.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/ibcs-variance-table/) |
-| Org Hierarchy Chart | 1.1.0 | [OrgHierarchyChart.pbiviz](downloads/OrgHierarchyChart.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/org-hierarchy-chart/) |
-| Renewal Timeline Calendar | 1.2.0 | [RenewalTimelineCalendar.pbiviz](downloads/RenewalTimelineCalendar.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/renewal-timeline-calendar/) |
-| Team Activity Timeline | 1.2.0 | [TeamActivityTimeline.pbiviz](downloads/TeamActivityTimeline.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/team-activity-timeline/) |
+| Services P&L | 1.4.3 | [ServicesPnL.pbiviz](https://github.com/kurminikhil3886-bit/powerbi-visuals-support/raw/main/downloads/ServicesPnL.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/services-pnl/) |
+| IBCS Variance Chart | 2.4.0 | [IbcsVarianceChart.pbiviz](https://github.com/kurminikhil3886-bit/powerbi-visuals-support/raw/main/downloads/IbcsVarianceChart.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/ibcs-variance-chart/) |
+| IBCS Variance Table | 1.3.0 | [IbcsVarianceTable.pbiviz](https://github.com/kurminikhil3886-bit/powerbi-visuals-support/raw/main/downloads/IbcsVarianceTable.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/ibcs-variance-table/) |
+| Org Hierarchy Chart | 1.1.0 | [OrgHierarchyChart.pbiviz](https://github.com/kurminikhil3886-bit/powerbi-visuals-support/raw/main/downloads/OrgHierarchyChart.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/org-hierarchy-chart/) |
+| Renewal Timeline Calendar | 1.2.0 | [RenewalTimelineCalendar.pbiviz](https://github.com/kurminikhil3886-bit/powerbi-visuals-support/raw/main/downloads/RenewalTimelineCalendar.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/renewal-timeline-calendar/) |
+| Team Activity Timeline | 1.2.0 | [TeamActivityTimeline.pbiviz](https://github.com/kurminikhil3886-bit/powerbi-visuals-support/raw/main/downloads/TeamActivityTimeline.pbiviz) | [Setup and support](https://kurminikhil3886-bit.github.io/powerbi-visuals-support/team-activity-timeline/) |
 
 **Install:** Power BI Desktop › Visualizations pane › **…** › **Import a visual from a file** › choose the `.pbiviz`.
 
